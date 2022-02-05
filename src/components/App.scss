@@ -2,6 +2,21 @@ body {
 	background-color: #333;
 }
 
+.flex-grid {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+}
+
+.flex-grid--center {
+	-webkit-box-pack: center;
+	-moz-box-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
 .align-right {
 	text-align: right;
 }
@@ -14,10 +29,30 @@ body {
 		color: #fff;
 		text-align: center;
 	}
-	.total {
-		display: inline-block;
-		margin-top: 0.5rem;
-		font-size: 0.875rem;
+	.title {
+		position: relative;
+		
+	}
+	.btn {
+		margin-left: 1rem;
+		padding-top: 6px;
+		button {
+			display: inline-block;
+			width: 40px;
+			height: 25px;
+			padding: 0.25rem;
+			font-size: 0.75rem;
+			color: #fff;
+			text-indent: -9999px;
+			border: 1px solid #fff;
+			border-radius: 3px;
+			background: rgba(255, 255, 255, 0.3) center center url('../../public/images/refresh.png') no-repeat;
+			background-size: 20px auto;
+			transition: all ease-in 0.1s;
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.5)
+			}
+		}
 	}
 	.result {
 		width: 100%;
