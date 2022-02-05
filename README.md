@@ -10,7 +10,6 @@
 - TypeScript
 - SCSS
 
-<br/>
 
 ## Preview
 
