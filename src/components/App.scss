@@ -1,0 +1,50 @@
+body {
+	background-color: #333;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.coin-tracker {
+	padding: 1rem 0.75rem;
+	h1 {
+		font-weight: 700;
+		font-size: 2rem;
+		color: #fff;
+		text-align: center;
+	}
+	.total {
+		display: inline-block;
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+	}
+	.result {
+		width: 100%;
+		min-width: 600px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		margin: 2rem auto 0;
+		table {
+			margin: auto;
+			font-size: 0.875rem;
+			th {
+				padding: 0.5rem;
+				font-weight: 700;
+				color: rgb(15, 184, 141);
+				border-bottom: 2px solid #bbb;
+			}
+			td {
+				padding: 0.5rem;
+				color: #eee;
+			}
+		}
+	}
+	.loader {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.4;
+		text-align: center;
+		color: #eee;
+	}
+}
