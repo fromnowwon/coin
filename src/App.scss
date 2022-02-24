@@ -125,6 +125,7 @@ body {
 		.result {
 			width: 715px;
 			height: auto;
+			overflow-y: hidden;
 			.result__inner {
 				padding-left: 0;
 				overflow-x: auto;
