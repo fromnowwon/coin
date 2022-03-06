@@ -28,7 +28,8 @@ function App(): JSX.Element {
 		fetch("https://api.coinpaprika.com/v1/tickers?quotes=KRW")
 		.then(response => response.json())
 		.then(json => {
-			setCoins(json.slice(0, 100));
+			console.log(json)
+			// setCoins(json.slice(0, 100));
 			setLoading(false);
 		})
 		.catch((error) => {
