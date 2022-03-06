@@ -29,8 +29,9 @@ function App(): JSX.Element {
 		.then(response => response.json())
 		.then(json => {
 			console.log(json)
-			// setCoins(json.slice(0, 100));
+			setCoins(json.slice(0, 100));
 			setLoading(false);
+			console.log(coins.length)
 		})
 		.catch((error) => {
 			console.log(error);
