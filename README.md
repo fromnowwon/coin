@@ -15,27 +15,24 @@
 <br/>
 
 ## Development Environment
-- Client: Next.js, TypeScript, SCSS
+- Client: React, TypeScript, SCSS
 
 <br />
 
 ## Tree
 ```
 coin-tracker
+├── public
+│   ├── images
+│   └── index.html
+├── src
+│   ├── components
+│   │   └── App.tsx
+│   ├── App.scss
+│   ├── index.scss
+│   └── index.tsx
 ├── README.md
 ├── package-lock.json
 ├── package.json
-├── public
-│   ├── images
-│   │   ├── coin-tracker-app.gif
-│   │   └── refresh.png
-│   ├── index.html
-│   └── robots.txt
-├── src
-│   ├── App.scss
-│   ├── components
-│   │   └── App.tsx
-│   ├── index.scss
-│   └── index.tsx
 └── tsconfig.json
 ```
