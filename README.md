@@ -22,15 +22,16 @@
 ## Tree
 ```
 coin-tracker
-├── public
-│   ├── images
+├── public (정적 자원 관리)
+│   ├── images (이미지 관리)
 │   └── index.html
 ├── src
+│   ├── App.scss (컴포넌트 스타일)
+│   ├── index.scss (글로벌 스타일)
 │   ├── components
-│   │   └── App.tsx
-│   ├── App.scss
-│   ├── index.scss
-│   └── index.tsx
+│   │   ├── App.tsx (컴포넌트 구성)
+│   │   └── CoinTable.tsx (코인 정보 테이블)
+│   └── index.tsx (App.tsx와 index.html 연결)
 ├── README.md
 ├── package-lock.json
 ├── package.json
