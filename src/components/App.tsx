@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import '../App.scss';
+import CoinTable from './CoinTable';
 
-interface CoinsType {
-	rank: number,
-	name: string,
-	symbol: string,
+export interface CoinsType {
+	id: string
+	rank: number
+	name: string
+	symbol: string
 	quotes: { 
 		KRW: { 
-			price: number,
-			market_cap: number,
-			volume_24h: number,
-			percent_change_24h: number,
+			price: number
+			market_cap: number
+			volume_24h: number
+			percent_change_24h: number
 			percent_change_7d: number
 		}
 	},
@@ -28,14 +30,12 @@ function App(): JSX.Element {
 		fetch("https://api.coinpaprika.com/v1/tickers?quotes=KRW")
 		.then(response => response.json())
 		.then(json => {
-			console.log(json)
 			setCoins(json.slice(0, 100));
 			setLoading(false);
-			console.log(coins.length)
 		})
 		.catch((error) => {
 			console.log(error);
-			// 에러 넘버를 확인하고 싶다면,
+			// 에러 넘버를 확인
 			console.log(error.response.status);
 		})
 	}, [])
@@ -54,38 +54,7 @@ function App(): JSX.Element {
 					loading
 					? <span className="loader">Loading...</span> 
 					: (
-						<div className="result__inner">
-							<table>
-								<thead>
-									<tr>
-										<th className="headCol rankCol">순위</th>
-										<th className="headCol nameCol">종목</th>
-										<th>기호</th>
-										<th>가격(KRW)</th>
-										<th>총 시가</th>
-										<th>거래량(24H)</th>
-										<th>변동(24H)</th>
-										<th>변동(7D)</th>
-									</tr>
-								</thead>
-								<tbody>
-									{
-										coins.map((coin: CoinsType, idx: number) => (
-											<tr key={ idx }>
-												<td className="headCol rankCol align-right">{ coin.rank }</td>
-												<td className="headCol nameCol">{ coin.name }</td>
-												<td>{ coin.symbol }</td>
-												<td className="align-right">₩{ Number(coin.quotes.KRW.price.toFixed(1)).toLocaleString() }</td>
-												<td className="align-right">{ (coin.quotes.KRW.market_cap / 1000000000000).toFixed(2) }T</td>
-												<td className="align-right">{ (coin.quotes.KRW.volume_24h / 1000000000000).toFixed(2) }T</td>
-												<td className="align-right">{ coin.quotes.KRW.percent_change_24h.toFixed(2) }%</td>
-												<td className="align-right">{ coin.quotes.KRW.percent_change_7d.toFixed(2) }%</td>
-											</tr>
-										))
-									}
-								</tbody>
-							</table>
-						</div>
+						<CoinTable coins={ coins }/>
 					)
 				}
 				</div>
