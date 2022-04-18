@@ -10,6 +10,7 @@
 
 ## Introduction
 - 1위부터 100위까지 암호화폐 실시간 시세 정보를 출력하는 페이지입니다.
+- 새로고침을 버튼을 통해 실시간 업데이트가 가능합니다.
 - API : [coinpaprika](https://api.coinpaprika.com/)
 
 <br/>
