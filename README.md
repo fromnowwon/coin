@@ -1,9 +1,5 @@
 # 암호화폐 실시간 시세 (Coin Tracker)
 
-📎 [Demo](https://fromnowwon.github.io/coin/)
-
-<br/>
-
 ![](./public/images/coin-tracker-app.gif)
 
 <br/>
